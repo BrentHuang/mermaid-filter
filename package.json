@@ -19,12 +19,12 @@
     "mermaid-filter": "index.js"
   },
   "dependencies": {
-    "@mermaid-js/mermaid-cli": "^10",
-    "imgur": "^0.3.1",
-    "minimist": ">=0.2.1",
-    "pandoc-filter": "^0.1.3",
-    "sanitize-filename": "1.6.1",
-    "tmp": "^0.0.28"
+    "@mermaid-js/mermaid-cli": "^11.3.0",
+    "imgur": "^2.4.2",
+    "minimist": "^1.2.8",
+    "pandoc-filter": "^2.2.0",
+    "sanitize-filename": "^1.6.3",
+    "tmp": "^0.2.3"
   },
   "devDependencies": {
     "eslint": "^8.56.0",
