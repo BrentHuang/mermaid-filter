@@ -1,4 +1,4 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
 const pandoc = require('pandoc-filter')
 const process = require('process')
 const utils = require('./lib/filter')
@@ -10,8 +10,8 @@ const fs = require('fs')
 const tmpObj = tmp.fileSync({ mode: 0o644, prefix: 'mermaid-filter-', postfix: '.err' })
 const errorLog = fs.createWriteStream(tmpObj.name)
 
-pandoc.toJSONFilter(function (type, value, format, meta) {
+pandoc.toJSONFilter(function (ele,format,meta) {
   // Redirect stderr to a globally created writeable stream
   process.stderr.write = errorLog.write.bind(errorLog)
-  return utils.mermaid(type, value, format, meta)
+  return utils.mermaid(ele.t, ele.c, format, meta)
 })
